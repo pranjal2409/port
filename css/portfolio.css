@@ -1,0 +1,85 @@
+/*  {{ Basic CSS */
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html, body{
+		height: 100%;
+		width: 100%;
+	}
+	a {
+		text-decoration: none;
+	}
+	li {
+		list-style: none;
+	}
+
+
+/* Basic CSS }}  */
+
+/*  {{ Containers CSS */
+
+	.container {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-rows: 1fr 5fr;
+	}
+
+/* Containers CSS }}  */
+
+/*  {{ Navigation CSS */
+
+	.navigation{
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		overflow: hidden;
+		background-color: #222;
+	}
+
+	.navigation a{
+		line-height: 10vh;
+	}
+
+/* Navigation CSS }}  */
+
+/*  {{ Portfolio CSS */
+
+	.wrapper {
+		margin-top: 10vh;
+		width: 100%;
+		height: 90vh;
+		display: grid;
+		grid-template-rows: auto auto auto auto auto;
+		padding: 10vh;
+	}
+
+	.projects{
+		height: 70vh;
+		display: grid;
+		margin-bottom: 10vh;
+		grid-template-rows: 1fr 3fr 2fr 1fr;
+	}
+
+	.heading{
+		background-color: blue;
+	}
+
+	.image{
+		background-color: yellow;
+	}
+
+	.description{
+		background-color: green;
+	}
+
+	.technologies{
+		background-color: red;
+	}
+
+/* Portfolio CSS }}  */
