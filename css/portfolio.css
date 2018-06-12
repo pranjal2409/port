@@ -25,7 +25,7 @@
 		width: 100%;
 		height: 100%;
 		display: grid;
-		grid-template-rows: 1fr 5fr;
+		grid-template-rows: auto auto;
 	}
 
 /* Containers CSS }}  */
@@ -33,53 +33,207 @@
 /*  {{ Navigation CSS */
 
 	.navigation{
+		height: 10vh;
 		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		overflow: hidden;
-		background-color: #222;
+		background-color: green;
+	}
+
+	.navigation .title{
+		float: left;
+		line-height: 10vh;
+		margin-left: 30px;
+	}
+
+	.navigation nav{
+		float: right;
+		display: flex;
+		justify-content: flex-end;
 	}
 
 	.navigation a{
 		line-height: 10vh;
+		font-size: 1.6em;
+		margin: 0 30px 0 15px;
+	}
+
+	.navigation img{
+		border-radius: 50%;
 	}
 
 /* Navigation CSS }}  */
 
 /*  {{ Portfolio CSS */
 
-	.wrapper {
-		margin-top: 10vh;
+	#wrapper {
 		width: 100%;
 		height: 90vh;
-		display: grid;
+		/*display: grid;
 		grid-template-rows: auto auto auto auto auto;
-		padding: 10vh;
+		padding: 10vh;*/
 	}
 
-	.projects{
-		height: 70vh;
-		display: grid;
-		margin-bottom: 10vh;
-		grid-template-rows: 1fr 3fr 2fr 1fr;
+	.project{
+		width: 84%;
+		margin: 2% auto 0 auto;
+		background-color: #656565;
+		height: 75%;
 	}
 
 	.heading{
+		text-align: center;
 		background-color: blue;
+		padding: 7px 0;
+	}
+
+	.wrap{
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 46% 54%;
+	}
+
+	.preview{
+		width: 100%;
+		background-color: red;
+		display: grid;
+		grid-template-rows: 75% 25%;
 	}
 
 	.image{
-		background-color: yellow;
+		width: 100%;
+	}
+
+	.buttons{
+		width: 100%;
+		background-color: blue;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+		align-items: center; 
+	}
+
+	button{
+		margin: auto;
+		padding: 12px 5px;
+		font-size: 20px;
+	}
+
+	button.redirect{
+		width: 80%;
+	}
+
+	.details{
+		width: 100%;
+		background-color: green;
+		display: grid;
+		grid-template-rows: 60% 40%;
 	}
 
 	.description{
-		background-color: green;
+		width: 100%;
+		background-color: white;
+		text-align: center;
+		padding: 25px;
+		font-size: 18px;
 	}
 
 	.technologies{
-		background-color: red;
+		width: 100%;
+		background-color: pink;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button.tech{
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 
 /* Portfolio CSS }}  */
+
+/*  {{ Slider CSS */
+	
+	.slider{
+		margin:0 auto;
+		position: relative;
+		width: 70%;
+		height: 0;
+		padding-bottom: 40%;
+		background: #222;
+	}
+	
+	.slide_img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.slide_img img{
+		width: 100%;
+		height: 100%;
+	}
+	
+	#i1, #i2, #i3, #i4, #i5{
+		display: none;
+	}
+	
+	.pre, .nxt{
+		width: 8%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		background: #222;
+		z-index:99;
+		cursor: pointer;
+	}
+	
+	.pre{
+		left: 0;
+	}
+	
+	.nxt{
+		right: 0;
+	}
+
+	.nav{
+		width: 100%;
+		height: 11px;
+		bottom: 5%;
+		position: absolute;
+		text-align: center;
+		z-index: 99;
+	}
+	
+	.dots{
+		top: -5px;
+		width: 18px;
+		height: 18px;
+		margin: 0 4px;
+		position: relative;
+		border-radius: 50%;
+		display: inline-block;
+		background: rgba(0,0,0,.6);
+	}
+	
+	.slide_img{
+		z-index: -1;
+	}
+	
+	#i1:checked ~ #one,
+	#i2:checked ~ #two,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four,
+	#i5:checked ~ #five{
+		z-index: 9;
+	}
+	
+	#i1:checked ~ .nav #dot1,
+	#i2:checked ~ .nav #dot2,
+	#i3:checked ~ .nav #dot3,
+	#i4:checked ~ .nav #dot4,
+	#i5:checked ~ .nav #dot5{
+		background: #fff;
+	}
+	
+/* Slider CSS }}  */
